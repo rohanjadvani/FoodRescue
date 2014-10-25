@@ -1,4 +1,6 @@
-package com.codeforgood.main.foodrescue;
+package com.codeforgood.main.foodrescue.fragments;
+
+import com.codeforgood.main.foodrescue.Main;
 
 import android.app.Activity;
 import android.support.v4.app.Fragment;

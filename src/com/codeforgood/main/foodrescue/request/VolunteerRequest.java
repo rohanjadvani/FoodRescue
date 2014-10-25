@@ -21,17 +21,17 @@ public class VolunteerRequest extends Request {
     }
 
     public void chooseCharity(Charity c){
-        if(volunteer.isLR == true){
+        if(volunteer.isLR() == true){
             charity = c;
         }
         else {
-            charity = None;
+            charity = null;
         }
     }
-    public getCharity(){
+    public Charity getCharity(){
         return charity;
     }
-    public getVolunteer(){
+    public Volunteer getVolunteer(){
         return volunteer;
     }
 

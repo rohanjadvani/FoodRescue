@@ -1,5 +1,6 @@
 package com.codeforgood.main.foodrescue.request;
 
+import com.codeforgood.main.foodrescue.user.Restaurant;
 import com.codeforgood.main.foodrescue.user.Volunteer;
 
 /**
@@ -25,7 +26,7 @@ public class RestaurantRequest extends Request {
         }
     }
     public void setLocation(Restaurant r){
-        location = r.location;
+        location = r.getLocation();
     }
 
 }

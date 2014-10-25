@@ -62,7 +62,7 @@ public class Volunteer {
     public String getPhone(){
     	return phone;
     }
-    public float getLocation(){
+    public Location getLocation(){
     	return location;
     }
     public boolean isLR(){

@@ -21,7 +21,8 @@ public class Charity {
 	    this.location = location;
 	    this.openTime = openTime;
 	    this.closeTime = closeTime
-	    }
+
+
 
     }
     public Location getLocation(){

@@ -1,7 +1,5 @@
 package com.codeforgood.main.foodrescue;
 
-import com.codeforgood.main.foodrescue.fragments.FragmentLogin;
-
 import android.content.Context;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -13,6 +11,10 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.Window;
 import android.widget.Button;
+
+import com.codeforgood.main.foodrescue.fragments.FragmentLogin;
+import com.parse.Parse;
+import com.parse.ParseObject;
 
 public class Main extends ActionBarActivity {
 
@@ -26,6 +28,12 @@ public class Main extends ActionBarActivity {
         getWindow().requestFeature(Window.FEATURE_ACTION_BAR);
         getActionBar().hide();
         setContentView(R.layout.activity_main);
+        Parse.initialize(this, "W1zWtxcdo66CoyHpqKCuxq32N9xU6gYt2vGmWAQ1",
+                "m5fDFnJWtVdDsRJc3EmEgIUSevuiDl1Uvi9a40Fe");
+        // test object
+        ParseObject testObject = new ParseObject("TestObject");
+        testObject.put("foo", "bar");
+        testObject.saveInBackground();
         mContext = getApplicationContext();
         mView = findViewById(android.R.id.content);
         loadFragmentTransaction(new FragmentLogin());
