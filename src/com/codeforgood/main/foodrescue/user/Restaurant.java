@@ -5,24 +5,12 @@ import android.location.Location;
 /**
  * Created by kevinchon on 10/24/14.
  */
-public class Restaurant {
-    private String email;
-    private String password;
+public class Restaurant extends User{
     private String name;
-    private String phone;
-    private Location location;
-    private String username;
 
     public Restaurant(String password, String name, Location location, String phone, String email, String username){
-
+        super(email, username, password, phone, location);
         this.name = name;
-        this.location = location;
-        this.phone = phone;
-        this.email = email;
-        this.password = password;
-        this.username = username;
-
-
     }
 
     public Location getLocation(){
