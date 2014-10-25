@@ -1092,7 +1092,7 @@ containing a value of this type.
         public static final int action_menu_divider=0x7f090002;
         public static final int action_menu_presenter=0x7f090003;
         public static final int action_mode_close_button=0x7f090024;
-        public static final int action_settings=0x7f090054;
+        public static final int action_settings=0x7f09005a;
         public static final int activity_chooser_view_content=0x7f090025;
         public static final int always=0x7f09000f;
         public static final int are_you=0x7f090046;
@@ -1109,13 +1109,13 @@ containing a value of this type.
         public static final int disableHome=0x7f090009;
         public static final int dropdown=0x7f090015;
         public static final int edit_query=0x7f090030;
-        public static final int email_edit=0x7f090051;
-        public static final int email_text=0x7f090050;
+        public static final int email_edit=0x7f090052;
+        public static final int email_text=0x7f090051;
         public static final int end=0x7f090017;
         public static final int expand_activities_button=0x7f090026;
         public static final int expanded_menu=0x7f09002c;
-        public static final int first_name_edit=0x7f09004d;
-        public static final int first_name_text=0x7f09004c;
+        public static final int first_name_edit=0x7f09004e;
+        public static final int first_name_text=0x7f09004d;
         public static final int foo_login=0x7f09003d;
         public static final int fragment_container=0x7f09003c;
         public static final int home=0x7f090000;
@@ -1123,8 +1123,8 @@ containing a value of this type.
         public static final int icon=0x7f09002a;
         public static final int ifRoom=0x7f090011;
         public static final int image=0x7f090027;
-        public static final int last_name_edit=0x7f09004f;
-        public static final int last_name_text=0x7f09004e;
+        public static final int last_name_edit=0x7f090050;
+        public static final int last_name_text=0x7f09004f;
         public static final int listMode=0x7f090006;
         public static final int list_item=0x7f090029;
         public static final int login_button=0x7f090041;
@@ -1133,13 +1133,18 @@ containing a value of this type.
         public static final int login_relative_main=0x7f090044;
         public static final int login_scroll=0x7f090043;
         public static final int login_username=0x7f09003f;
+        public static final int logo_signup=0x7f09004b;
         public static final int middle=0x7f090018;
         public static final int never=0x7f090012;
         public static final int none=0x7f090019;
         public static final int normal=0x7f090007;
+        public static final int password_edit=0x7f090056;
+        public static final int password_text=0x7f090055;
+        public static final int phone_edit=0x7f090058;
+        public static final int phone_text=0x7f090057;
         public static final int progress_circular=0x7f090004;
         public static final int progress_horizontal=0x7f090005;
-        public static final int questions=0x7f09004b;
+        public static final int questions=0x7f09004c;
         public static final int radio=0x7f09002f;
         public static final int search_badge=0x7f090032;
         public static final int search_bar=0x7f090031;
@@ -1156,6 +1161,7 @@ containing a value of this type.
         public static final int showHome=0x7f09000c;
         public static final int showTitle=0x7f09000d;
         public static final int sign_up=0x7f090042;
+        public static final int sign_up_button=0x7f090059;
         public static final int split_action_bar=0x7f09001e;
         public static final int submit_area=0x7f090039;
         public static final int tabMode=0x7f090008;
@@ -1163,8 +1169,8 @@ containing a value of this type.
         public static final int top_action_bar=0x7f090020;
         public static final int up=0x7f090021;
         public static final int useLogo=0x7f09000e;
-        public static final int username_edit=0x7f090053;
-        public static final int username_text=0x7f090052;
+        public static final int username_edit=0x7f090054;
+        public static final int username_text=0x7f090053;
         public static final int withText=0x7f090013;
     }
     public static final class integer {
@@ -1276,6 +1282,7 @@ containing a value of this type.
         public static final int last_name=0x7f0a0019;
         public static final int login=0x7f0a0012;
         public static final int password=0x7f0a0011;
+        public static final int phone=0x7f0a001b;
         public static final int restaurant=0x7f0a0016;
         public static final int sign_up=0x7f0a0013;
         public static final int username=0x7f0a0010;

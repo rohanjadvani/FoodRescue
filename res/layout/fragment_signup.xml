@@ -13,7 +13,9 @@
         <RelativeLayout
             android:id="@+id/are_you_block"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" >
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="30dp"
+            android:layout_marginTop="20dp" >
 
             <TextView
                 android:id="@+id/are_you"
@@ -48,6 +50,17 @@
                     android:text="@string/charity" />
             </RadioGroup>
         </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/logo_signup"
+            android:layout_width="167dp"
+            android:layout_height="150dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_margin="10dp"
+            android:background="@drawable/launcher"
+            android:contentDescription="@string/hello_world" />
 
         <RelativeLayout
             android:id="@+id/questions"
@@ -103,7 +116,7 @@
                 android:layout_alignBaseline="@+id/email_text"
                 android:layout_toRightOf="@+id/email_text"
                 android:hint="@string/email" />
-            
+
             <TextView
                 android:id="@+id/username_text"
                 android:layout_width="wrap_content"
@@ -122,7 +135,56 @@
                 android:layout_alignBaseline="@+id/username_text"
                 android:layout_toRightOf="@+id/username_text"
                 android:hint="@string/username" />
+
+            <TextView
+                android:id="@+id/password_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/username_text"
+                android:layout_marginBottom="20dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:text="@string/password" />
+
+            <EditText
+                android:id="@+id/password_edit"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/password_text"
+                android:layout_toRightOf="@+id/password_text"
+                android:hint="@string/password"
+                android:inputType="textPassword" />
+
+            <TextView
+                android:id="@+id/phone_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/password_text"
+                android:layout_marginBottom="20dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="30dp"
+                android:text="@string/phone" />
+
+            <EditText
+                android:id="@+id/phone_edit"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/phone_text"
+                android:layout_toRightOf="@+id/phone_text"
+                android:hint="@string/phone" />
         </RelativeLayout>
+
+        <Button
+            android:id="@+id/sign_up_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/questions"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="20dp"
+            android:layout_marginTop="20dp"
+            android:text="@string/sign_up" />
     </RelativeLayout>
 
 </ScrollView>
