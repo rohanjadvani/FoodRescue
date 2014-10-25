@@ -20,7 +20,8 @@ public class JSONData {
             starbucks.put("username", "starbucks");
             starbucks.put("password", "sbucks");
             starbucks.put("phone", "123-456-7890");
-            starbucks.put("location", "40.749064, -73.992713");
+            starbucks.put("latitude", 40.749064);
+            starbucks.put("longtitude", -73.992713);
         } catch (JSONException e) {
             e.printStackTrace();
         }
