@@ -23,5 +23,8 @@
     <string name="future">Schedule Future Pickup</string>
     <string name="check_in_pickup">Check In @ Pickup</string>
     <string name="check_in_dropoff">Check In @ Dropoff</string>
+    <string name="selected_location">Selected Pickup Location</string>
+    <string name="address">Address</string>
+    <string name="pickup_info">Pickup information:</string>
 
 </resources>

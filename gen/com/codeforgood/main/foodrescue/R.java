@@ -1475,12 +1475,14 @@ containing a value of this type.
         public static final int action_menu_divider=0x7f0b0002;
         public static final int action_menu_presenter=0x7f0b0003;
         public static final int action_mode_close_button=0x7f0b0036;
-        public static final int action_settings=0x7f0b0075;
+        public static final int action_settings=0x7f0b007e;
         public static final int activity_chooser_view_content=0x7f0b0037;
+        public static final int address=0x7f0b0077;
         public static final int always=0x7f0b0022;
         public static final int are_you=0x7f0b0059;
         public static final int are_you_block=0x7f0b0058;
         public static final int are_you_radio=0x7f0b005a;
+        public static final int attend_event_button=0x7f0b007d;
         public static final int beginning=0x7f0b0029;
         public static final int bg_logo=0x7f0b006d;
         public static final int book_now=0x7f0b0014;
@@ -1496,6 +1498,7 @@ containing a value of this type.
         public static final int classic=0x7f0b0017;
         public static final int collapseActionView=0x7f0b0023;
         public static final int default_activity_button=0x7f0b003a;
+        public static final int description=0x7f0b007a;
         public static final int dialog=0x7f0b0027;
         public static final int disableHome=0x7f0b001c;
         public static final int dropdown=0x7f0b0028;
@@ -1503,6 +1506,7 @@ containing a value of this type.
         public static final int email_edit=0x7f0b0065;
         public static final int email_text=0x7f0b0064;
         public static final int end=0x7f0b002a;
+        public static final int event_space=0x7f0b007b;
         public static final int expand_activities_button=0x7f0b0038;
         public static final int expanded_menu=0x7f0b003e;
         public static final int first_name_edit=0x7f0b0061;
@@ -1520,6 +1524,7 @@ containing a value of this type.
         public static final int image=0x7f0b0039;
         public static final int last_name_edit=0x7f0b0063;
         public static final int last_name_text=0x7f0b0062;
+        public static final int lead_rescuer=0x7f0b007c;
         public static final int listMode=0x7f0b001a;
         public static final int list_item=0x7f0b003b;
         public static final int login_button=0x7f0b0053;
@@ -1540,6 +1545,7 @@ containing a value of this type.
         public static final int password_text=0x7f0b0068;
         public static final int phone_edit=0x7f0b006b;
         public static final int phone_text=0x7f0b006a;
+        public static final int pickup_info_text=0x7f0b0076;
         public static final int production=0x7f0b000d;
         public static final int progress_circular=0x7f0b0004;
         public static final int progress_horizontal=0x7f0b0005;
@@ -1559,6 +1565,7 @@ containing a value of this type.
         public static final int search_plate=0x7f0b0048;
         public static final int search_src_text=0x7f0b0049;
         public static final int search_voice_btn=0x7f0b004d;
+        public static final int selected_text=0x7f0b0075;
         public static final int selectionDetails=0x7f0b0011;
         public static final int shortcut=0x7f0b0040;
         public static final int showCustom=0x7f0b001e;
@@ -1572,6 +1579,7 @@ containing a value of this type.
         public static final int submit_area=0x7f0b004b;
         public static final int tabMode=0x7f0b001b;
         public static final int terrain=0x7f0b000a;
+        public static final int time=0x7f0b0078;
         public static final int title=0x7f0b003d;
         public static final int top_action_bar=0x7f0b0032;
         public static final int up=0x7f0b0033;
@@ -1579,6 +1587,7 @@ containing a value of this type.
         public static final int username_edit=0x7f0b0067;
         public static final int username_text=0x7f0b0066;
         public static final int volunteer_text=0x7f0b006e;
+        public static final int weight=0x7f0b0079;
         public static final int withText=0x7f0b0026;
         public static final int wrap_content=0x7f0b0013;
     }
@@ -1638,7 +1647,8 @@ containing a value of this type.
         public static final int fragment_pickup=0x7f03001a;
         public static final int fragment_signup=0x7f03001b;
         public static final int fragment_volunteer=0x7f03001c;
-        public static final int support_simple_spinner_dropdown_item=0x7f03001d;
+        public static final int pickup_location=0x7f03001d;
+        public static final int support_simple_spinner_dropdown_item=0x7f03001e;
     }
     public static final class menu {
         public static final int main=0x7f0c0000;
@@ -1687,6 +1697,7 @@ containing a value of this type.
         public static final int accept=0x7f060002;
         public static final int account=0x7f060040;
         public static final int action_settings=0x7f060032;
+        public static final int address=0x7f060047;
         public static final int app_name=0x7f060030;
         public static final int are_you=0x7f060037;
         public static final int charity=0x7f06003a;
@@ -1803,7 +1814,9 @@ containing a value of this type.
         public static final int nearby=0x7f060042;
         public static final int password=0x7f060034;
         public static final int phone=0x7f06003e;
+        public static final int pickup_info=0x7f060048;
         public static final int restaurant=0x7f060039;
+        public static final int selected_location=0x7f060046;
         public static final int sign_out=0x7f060041;
         public static final int sign_up=0x7f060036;
         public static final int store_picture_message=0x7f060001;

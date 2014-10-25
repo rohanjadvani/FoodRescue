@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <TextView
+        android:id="@+id/selected_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="20dp"
+        android:text="@string/selected_location" />
+
+    <TextView
+        android:id="@+id/pickup_info_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/selected_text"
+        android:layout_margin="20dp"
+        android:text="@string/pickup_info" />
+
+    <TextView
+        android:id="@+id/address"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/pickup_info_text"
+        android:layout_margin="20dp"
+        android:layout_marginLeft="20dp"
+        android:text="@string/address" />
+
+    <TextView
+        android:id="@+id/time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/address"
+        android:layout_margin="20dp"
+        android:layout_marginLeft="20dp"
+        android:text="Time:" />
+
+    <TextView
+        android:id="@+id/weight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/time"
+        android:layout_margin="20dp"
+        android:layout_marginLeft="20dp"
+        android:text="Weight:" />
+
+    <TextView
+        android:id="@+id/description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/weight"
+        android:layout_margin="20dp"
+        android:layout_marginLeft="20dp"
+        android:text="Description:" />
+
+    <TextView
+        android:id="@+id/event_space"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/description"
+        android:layout_margin="20dp"
+        android:layout_marginLeft="20dp"
+        android:text="Event Space" />
+
+    <TextView
+        android:id="@+id/lead_rescuer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/event_space"
+        android:layout_margin="20dp"
+        android:layout_marginLeft="20dp"
+        android:text="Lead Rescuer" />
+
+    <Button
+        android:id="@+id/attend_event_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lead_rescuer"
+        android:layout_margin="20dp"
+        android:text="Attend event!" >
+    </Button>
+
+</RelativeLayout>
