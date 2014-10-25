@@ -8,23 +8,19 @@ import android.location.Location;
 public class Restaurant {
     private String email;
     private String password;
-    private String passwordconfirmation;
     private String name;
     private String phone;
     private Location location;
 
-    public Restaurant(String password, String passwordconfirmation, String name, Location location, String phone, String email){
-        if (password = passwordconfirmation) {
-            this.name = name;
-            this.location = location;
-            this.phone = phone;
-            this.email = email;
-            this.password = password;
-            this.passwordconfirmation = passwordconfirmation;
-        }
-        else{
-            System.out.println("Passwords Do Not Match")
-        }
+    public Restaurant(String password, String name, Location location, String phone, String email){
+
+        this.name = name;
+        this.location = location;
+        this.phone = phone;
+        this.email = email;
+        this.password = password;
+
+
     }
 
     public Location getLocation(){

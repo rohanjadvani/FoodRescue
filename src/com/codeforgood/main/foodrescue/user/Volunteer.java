@@ -8,32 +8,26 @@ import com.codeforgood.main.foodrescue.request.Request;
  * Created by kevinchon on 10/24/14.
  */
 public class Volunteer {
-    private String email;
-    private String password;
-    private String passwordconfirmation;
     private String firstname;
     private String lastname;
-    private boolean isLeadRescuer;
+    private String email;
+    private String password;
     private String phone;
+    private boolean isLeadRescuer;
     private Location location;
     private Request[] listOfRequests;
     private boolean hasTraining;
 
-    public Volunteer(String email, String password, String passwordconfirmation,
+    public Volunteer(String email, String password,
                      String firstname, String lastname, String phone){
-        if (password = passwordconfirmation) {
-	        this.email = email;
-	        this.password = password;
-	        this.passwordconfirmation = passwordconfirmation;
-	        this.firstname = firstname;
-	        this.lastname = lastname;
-	        this.phone = phone;
-	        this.isLeadRescuer = false;
-	        this.hasTraining = false;
-	       }
-	    else{
-	    	System.out.println("Passwords Do Not Match")
-	    }
+	       this.email = email;
+	       this.password = password;
+	       this.firstname = firstname;
+	       this.lastname = lastname;
+	       this.phone = phone;
+	       this.isLeadRescuer = false;
+	       this.hasTraining = false;
+
     }
 
     public void setLocation(float longitude, float latitude){
