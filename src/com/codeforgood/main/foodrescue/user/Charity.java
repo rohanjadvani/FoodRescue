@@ -6,7 +6,8 @@ import android.location.Location;
  * Created by kevinchon on 10/24/14.
  */
 public class Charity {
-	private String email;
+
+    private String email;
     private String password;
     private String passwordconfirmation;
     private String name;
@@ -45,6 +46,7 @@ public class Charity {
     }
     public String getName(){
         return name;
+
     }
 
 }

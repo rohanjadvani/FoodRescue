@@ -8,5 +8,10 @@
     <string name="password">password</string>
     <string name="login">Login</string>
     <string name="sign_up">Sign up</string>
+    <string name="are_you">ARE YOU A:</string>
+    <string name="volunteer">Volunteer</string>
+    <string name="restaurant">Restaurant</string>
+    <string name="charity">Charity</string>
+    <string name="first_name">First Name</string>
 
 </resources>
