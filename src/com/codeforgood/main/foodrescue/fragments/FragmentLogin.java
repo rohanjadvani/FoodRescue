@@ -10,11 +10,9 @@ import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import com.codeforgood.main.foodrescue.R;
-import com.parse.LogInCallback;
-import com.parse.ParseUser;
-import com.parse.Parse;
 import com.parse.*;
 
 /**
@@ -30,12 +28,14 @@ public class FragmentLogin extends Fragment implements OnClickListener {
     Button signUp;
     EditText userNameEditText;
     EditText passWordEditText;
+    boolean validLogin; 
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
             Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_login, container, false);
         mContext = getActivity().getApplicationContext();
+        this.validLogin = false;
         initButtons();
         findButtons(view);
         setListeners();
@@ -67,6 +67,10 @@ public class FragmentLogin extends Fragment implements OnClickListener {
         switch (v.getId()) {
             case R.id.login_button:
             	signIntoParse();
+            	if(validLogin == false){
+   		    	Toast.makeText(mContext, "Wrong password & username combination",
+		    			   Toast.LENGTH_LONG).show();
+            	}
                 break;
             case R.id.sign_up:
                 signUpFragment();
@@ -81,11 +85,12 @@ public class FragmentLogin extends Fragment implements OnClickListener {
     			passWordEditText.getText().toString(), new LogInCallback() {
     		  public void done(ParseUser user, ParseException e) {
     		    if (user != null) {
+    		    	validLogin = true;
     		      // Hooray! The user is logged in.
     		    	System.out.println("User has logged in successfully");
     		    } else {
-    		      // Signup failed. Look at the ParseException to see what happened.
-    		    	System.out.println("Wrong username & password combination");
+    		      // Signup failed. Look at the ParseException to see what happened
+    		    	validLogin = false;
     		    }
     		  }
     		});

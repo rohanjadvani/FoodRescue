@@ -1,5 +1,7 @@
 package com.codeforgood.main.foodrescue.user;
 
+import com.parse.ParseObject;
+
 import android.location.Location;
 
 /**
@@ -8,7 +10,7 @@ import android.location.Location;
  * @author Rohan Jadvani
  *
  */
-public abstract class User {
+public abstract class User extends ParseObject{
 
     private String email;
     private String username;

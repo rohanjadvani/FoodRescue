@@ -4,11 +4,12 @@ import android.location.Location;
 
 import com.codeforgood.main.foodrescue.user.Restaurant;
 import com.codeforgood.main.foodrescue.user.Volunteer;
+import com.parse.ParseObject;
 
 /**
  * Created by kevinchon on 10/24/14.
  */
-public abstract class Request {
+public abstract class Request extends ParseObject{
     private String date;
     private String time;
     private String typeOfFood;
