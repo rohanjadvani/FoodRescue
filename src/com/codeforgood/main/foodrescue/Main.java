@@ -30,10 +30,6 @@ public class Main extends ActionBarActivity {
         setContentView(R.layout.activity_main);
         Parse.initialize(this, "W1zWtxcdo66CoyHpqKCuxq32N9xU6gYt2vGmWAQ1",
                 "m5fDFnJWtVdDsRJc3EmEgIUSevuiDl1Uvi9a40Fe");
-        // test object
-        ParseObject testObject = new ParseObject("TestObject");
-        testObject.put("foo", "bar");
-        testObject.saveInBackground();
         mContext = getApplicationContext();
         mView = findViewById(android.R.id.content);
         loadFragmentTransaction(new FragmentLogin());
