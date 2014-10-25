@@ -11,20 +11,23 @@ public class Charity {
     private String password;
     private String name;
     private Location location;
-    private String openTime;
-    private String closeTime;
+    private String phone;
+    private String username;
 
-    public Charity(String email, String password, String name, Location location, String openTime, String closeTime) {
+
+    public Charity(String password, String name, Location location, String phone, String email, String username) {
 	    this.email = email;
 	    this.password = password
 	    this.name = name;
 	    this.location = location;
-	    this.openTime = openTime;
-	    this.closeTime = closeTime
+	    this.phone = phone;
+	    this.username = username;
+
 
 
 
     }
+
     public Location getLocation(){
         return location;
     }
@@ -34,15 +37,14 @@ public class Charity {
     public String getPassword(){
         return password;
     }
-    public String getOpenTime(){
-        return openTime;
-    }
-    public String getCloseTime(){
-        return closeTime;
+    public String getPhone(){
+        return phone;
     }
     public String getName(){
         return name;
-
+    }
+    public String getUsername(){
+        return username;
     }
 
 }

@@ -11,14 +11,16 @@ public class Restaurant {
     private String name;
     private String phone;
     private Location location;
+    private String username;
 
-    public Restaurant(String password, String name, Location location, String phone, String email){
+    public Restaurant(String password, String name, Location location, String phone, String email, String username){
 
         this.name = name;
         this.location = location;
         this.phone = phone;
         this.email = email;
         this.password = password;
+        this.username = username;
 
 
     }
@@ -37,5 +39,8 @@ public class Restaurant {
     }
     public String getName(){
         return name;
+    }
+    public String getUsername(){
+        return username;
     }
 }

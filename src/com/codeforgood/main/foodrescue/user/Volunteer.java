@@ -11,6 +11,7 @@ public class Volunteer {
     private String firstname;
     private String lastname;
     private String email;
+    private String username;
     private String password;
     private String phone;
     private boolean isLeadRescuer;
@@ -19,12 +20,13 @@ public class Volunteer {
     private boolean hasTraining;
 
     public Volunteer(String email, String password,
-                     String firstname, String lastname, String phone){
+                     String firstname, String lastname, String phone, String username){
 	       this.email = email;
 	       this.password = password;
 	       this.firstname = firstname;
 	       this.lastname = lastname;
 	       this.phone = phone;
+	       this.username = username;
 	       this.isLeadRescuer = false;
 	       this.hasTraining = false;
 
@@ -62,11 +64,15 @@ public class Volunteer {
     public String getPhone(){
     	return phone;
     }
+    public String getUsername(){
+    	return username;
+    }
     public Location getLocation(){
     	return location;
     }
     public boolean isLR(){
     	return isLeadRescuer;
     }
+
 
 }
