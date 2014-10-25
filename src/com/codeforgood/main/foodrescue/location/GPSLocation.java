@@ -42,6 +42,7 @@ public class GPSLocation implements LocationListener {
                         MIN_TIME_UPDATES, MIN_DISTANCE_UPDATE, this);
             }
         } else {
+            // no service is available
             if (!enabled && mListener != null) {
                 mListener.isGPSAvailable(false);
             }
