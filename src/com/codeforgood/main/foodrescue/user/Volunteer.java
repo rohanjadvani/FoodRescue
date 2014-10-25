@@ -13,9 +13,9 @@ public class Volunteer {
     private String passwordconfirmation;
     private String firstname;
     private String lastname;
+    private boolean isLeadRescuer;
     private String phone;
     private Location location;
-    private boolean isLeadRescuer;
     private Request[] listOfRequests;
     private boolean hasTraining;
 
