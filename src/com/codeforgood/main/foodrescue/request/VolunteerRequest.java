@@ -1,4 +1,7 @@
-package com.example.kevinchon.foodrescue;
+package com.codeforgood.main.foodrescue.request;
+
+import com.codeforgood.main.foodrescue.user.Charity;
+import com.codeforgood.main.foodrescue.user.Volunteer;
 
 /**
  * Created by kevinchon on 10/24/14.

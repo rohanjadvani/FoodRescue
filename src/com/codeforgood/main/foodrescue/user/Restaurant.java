@@ -1,4 +1,6 @@
-package com.example.kevinchon.foodrescue;
+package com.codeforgood.main.foodrescue.user;
+
+import android.location.Location;
 
 /**
  * Created by kevinchon on 10/24/14.

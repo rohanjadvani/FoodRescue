@@ -1,4 +1,9 @@
-package com.example.kevinchon.foodrescue;
+package com.codeforgood.main.foodrescue.request;
+
+import android.location.Location;
+
+import com.codeforgood.main.foodrescue.user.Restaurant;
+import com.codeforgood.main.foodrescue.user.Volunteer;
 
 /**
  * Created by kevinchon on 10/24/14.

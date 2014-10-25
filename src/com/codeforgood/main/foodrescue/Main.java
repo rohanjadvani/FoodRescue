@@ -1,12 +1,16 @@
 package com.codeforgood.main.foodrescue;
 
-import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 
-public class MainActivity extends ActionBarActivity {
+import com.codeforgood.main.foodrescue.user.User;
 
+public class Main extends ActionBarActivity {
+
+    User mSelf;
+    
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
