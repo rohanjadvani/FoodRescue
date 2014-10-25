@@ -11,6 +11,7 @@ import android.content.Context;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -37,6 +38,7 @@ public class FragmentPickup extends Fragment implements OnMarkerClickListener {
 
     private static final LatLng NEW_YORK = new LatLng(40.7127, -74.0059);
     List<LatLng> positions;
+    List<String> names;
     GoogleMap map;
     Context mContext;
     Button nearbyPickup;
@@ -48,6 +50,7 @@ public class FragmentPickup extends Fragment implements OnMarkerClickListener {
                 .inflate(R.layout.fragment_pickup, container, false);
         mContext = getActivity().getApplicationContext();
         positions = new ArrayList<LatLng>();
+        names = new ArrayList<String>();
         initLocations();
         setupMap();
         initButtons();
@@ -57,24 +60,25 @@ public class FragmentPickup extends Fragment implements OnMarkerClickListener {
     }
 
     private void initLocations() {
-        JSONArray data = JSONData.data;
-        // iterate through json array
-        for (int index = 0; index < data.length(); index++) {
-            try {
-                JSONObject obj = data.getJSONObject(index);
-            } catch (JSONException e) {
-                e.printStackTrace();
-            }
-        }
+        // I'm going to hard code this because JSON sucks.
+        positions.add(new LatLng(40.749064, -73.992713));
+        names.add("Starbucks");
+        positions.add(new LatLng(40.721201, -74.000567));
+        names.add("Starbucks Soho");
+        positions.add(new LatLng(40.735372, -73.990417));
+        names.add("Panera");
     }
 
     private void setupMap() {
         map = ((SupportMapFragment) getFragmentManager().findFragmentById(
                 R.id.map)).getMap();
         map.setOnMarkerClickListener(this);
-        Marker nyc = map.addMarker(new MarkerOptions().position(NEW_YORK)
-                .title("New York City"));
-        map.moveCamera(CameraUpdateFactory.newLatLngZoom(NEW_YORK, 15));
+        // load positions
+        for (int index = 0; index < positions.size(); index++) {
+            map.addMarker(new MarkerOptions().position(positions.get(index))
+                    .title(names.get(index)));
+        }
+        map.moveCamera(CameraUpdateFactory.newLatLngZoom(positions.get(0), 15));
     }
 
     private void initButtons() {

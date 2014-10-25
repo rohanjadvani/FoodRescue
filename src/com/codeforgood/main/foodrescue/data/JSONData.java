@@ -12,7 +12,7 @@ import org.json.JSONObject;
  */
 public class JSONData {
 
-    static JSONObject starbucks = new JSONObject();
+    public static JSONObject starbucks = new JSONObject();
     static {
         try {
             starbucks.put("name", "Starbucks");
@@ -27,13 +27,41 @@ public class JSONData {
         }
     }
 
-    public static JSONArray data = new JSONArray();
+    public static JSONObject starbuckssoho = new JSONObject();
     static {
         try {
-            data.put(0, starbucks);
+            starbuckssoho.put("name", "StarbucksSoho");
+            starbuckssoho.put("email", "star@buckssoho.com");
+            starbuckssoho.put("username", "starbuckssoho");
+            starbuckssoho.put("password", "sbuckssoho");
+            starbuckssoho.put("phone", "123-456-7890");
+            starbuckssoho.put("latitude", 40.721201);
+            starbuckssoho.put("longtitude", -74.000567);
         } catch (JSONException e) {
             e.printStackTrace();
         }
+    }
+
+    public static JSONObject panera = new JSONObject();
+    static {
+        try {
+            panera.put("name", "Panera");
+            panera.put("email", "pan@era.com");
+            panera.put("username", "panera");
+            panera.put("password", "pan");
+            panera.put("phone", "123-456-7890");
+            panera.put("latitude", 40.735372);
+            panera.put("longtitude", -73.990417);
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public static JSONArray data = new JSONArray();
+    static {
+        data.put(starbucks);
+        data.put(starbuckssoho);
+        data.put(panera);
     }
 
 }

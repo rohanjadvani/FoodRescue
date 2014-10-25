@@ -18,6 +18,12 @@ import com.codeforgood.main.foodrescue.R;
 public class FragmentConfirmPickup extends Fragment {
 
     Context mContext;
+    String address;
+    String time;
+    int weight;
+    String description;
+    String eventSpace;
+    String leadRescuer;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
