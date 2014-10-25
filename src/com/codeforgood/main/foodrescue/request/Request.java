@@ -40,5 +40,29 @@ public abstract class Request {
     public void setLocation(Restaurant restaurant){
         this.location = restaurant.getLocation();
     }
+    public String getDate(){
+        return date;
+    }
+    public String getTime(){
+        return time;
+    }
+    public String getTypeofFood(){
+        return typeOfFood;
+    }
+    public int getWeightofFood(){
+        return weightOfFood;
+    }   
+    public int getNumofVolunteers(){
+        return numOfVolunteers;
+    }
+    public Volunteer[] getListofVolunteers(){
+        return volunteers;
+    }
+    public boolean getisLR(){
+        return leadRescuer;
+    }
+     public float getLocation(){
+        return location;
+    }
 
 }

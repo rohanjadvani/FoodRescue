@@ -24,5 +24,8 @@ public class RestaurantRequest extends Request {
             numOfVolunteers = (weightOfFood % 15) + 1;
         }
     }
+    public void setLocation(Restaurant r){
+        location = r.location;
+    }
 
 }

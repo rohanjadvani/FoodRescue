@@ -21,14 +21,19 @@ public class Volunteer {
 
     public Volunteer(String email, String password, String passwordconfirmation,
                      String firstname, String lastname, String phone){
-        this.email = email;
-        this.password = password;
-        this.passwordconfirmation = passwordconfirmation;
-        this.firstname = firstname;
-        this.lastname = lastname;
-        this.phone = phone;
-        this.isLeadRescuer = false;
-        this.hasTraining = false;
+        if (password = passwordconfirmation) {
+	        this.email = email;
+	        this.password = password;
+	        this.passwordconfirmation = passwordconfirmation;
+	        this.firstname = firstname;
+	        this.lastname = lastname;
+	        this.phone = phone;
+	        this.isLeadRescuer = false;
+	        this.hasTraining = false;
+	       }
+	    else{
+	    	System.out.println("Passwords Do Not Match")
+	    }
     }
 
     public void setLocation(float longitude, float latitude){
@@ -47,6 +52,27 @@ public class Volunteer {
         else{
             isLeadRescuer = false;
         }
+    }
+    public String getEmail(){
+    	return email;
+    }
+    public String getPassword(){
+    	return password;
+    }
+    public String getFirstName(){
+    	return firstname;
+    }
+    public String getLastName(){
+    	return lastname;
+    }	
+    public String getPhone(){
+    	return phone;
+    }
+    public float getLocation(){
+    	return location;
+    }
+    public boolean isLR(){
+    	return isLeadRescuer;
     }
 
 }
