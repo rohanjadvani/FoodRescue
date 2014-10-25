@@ -1,52 +1,34 @@
 package com.codeforgood.main.foodrescue;
 
+import com.codeforgood.main.foodrescue.fragments.FragmentLogin;
+
 import android.content.Context;
-import android.content.Intent;
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.view.View.OnClickListener;
+import android.view.Window;
 import android.widget.Button;
 
-import com.codeforgood.main.foodrescue.fragments.FragmentLogin;
-import com.codeforgood.main.foodrescue.user.User;
+public class Main extends ActionBarActivity {
 
-public class Main extends ActionBarActivity implements OnClickListener {
-
-    User mSelf;
-    Button loginPage;
-    Button signUp;
-    View view;
-    Context context;
+    Context mContext;
+    View mView;
+    Button login;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        getWindow().requestFeature(Window.FEATURE_ACTION_BAR);
+        getActionBar().hide();
         setContentView(R.layout.activity_main);
-
-        // bruhhh i'm cheating
-        context = getApplicationContext();
-        view = getWindow().getDecorView().findViewById(android.R.id.content);
-        initButtons();
-        findButtons();
-        setListeners();
-    }
-
-    private void initButtons() {
-        loginPage = new Button(context);
-        signUp = new Button(context);
-    }
-
-    private void findButtons() {
-        loginPage = (Button) findViewById(R.id.login);
-        signUp = (Button) findViewById(R.id.sign_up);
-    }
-
-    private void setListeners() {
-        loginPage.setOnClickListener(this);
-        signUp.setOnClickListener(this);
+        mContext = getApplicationContext();
+        mView = findViewById(android.R.id.content);
+        loadFragmentTransaction(new FragmentLogin());
     }
 
     @Override
@@ -68,21 +50,12 @@ public class Main extends ActionBarActivity implements OnClickListener {
         return super.onOptionsItemSelected(item);
     }
 
-    @Override
-    public void onClick(View v) {
-        Intent action = null;
-        switch (v.getId()) {
-            case R.id.login:
-                action = new Intent(v.getContext().getApplicationContext(),
-                        FragmentLogin.class);
-                break;
-            case R.id.sign_up:
-                break;
-            default:
-                break;
-        }
-        if (action != null) {
-            startActivity(action);
-        }
+    public void loadFragmentTransaction(Fragment fragment) {
+        FragmentManager fragmentManager = getSupportFragmentManager();
+        FragmentTransaction fragmentTransaction = fragmentManager
+                .beginTransaction();
+        fragmentTransaction.add(R.id.fragment_container, fragment);
+        fragmentTransaction.commit();
     }
+
 }

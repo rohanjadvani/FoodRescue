@@ -6,6 +6,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.codeforgood.main.foodrescue.R;
+
 /**
  * Login fragment
  * 
@@ -14,12 +16,11 @@ import android.view.ViewGroup;
  */
 public class FragmentLogin extends Fragment {
 
-    View view;
-    
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
             Bundle savedInstanceState) {
-        view = inflater.inflate(R.layout.fragment_login, container, false);
+        View view = inflater.inflate(R.layout.fragment_login, container, false);
+        return view;
     }
 
 }
