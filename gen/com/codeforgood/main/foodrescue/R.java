@@ -1475,14 +1475,14 @@ containing a value of this type.
         public static final int action_menu_divider=0x7f0b0002;
         public static final int action_menu_presenter=0x7f0b0003;
         public static final int action_mode_close_button=0x7f0b0036;
-        public static final int action_settings=0x7f0b007e;
+        public static final int action_settings=0x7f0b007d;
         public static final int activity_chooser_view_content=0x7f0b0037;
         public static final int address=0x7f0b0077;
         public static final int always=0x7f0b0022;
         public static final int are_you=0x7f0b0059;
         public static final int are_you_block=0x7f0b0058;
         public static final int are_you_radio=0x7f0b005a;
-        public static final int attend_event_button=0x7f0b007d;
+        public static final int attend_event_button=0x7f0b007c;
         public static final int beginning=0x7f0b0029;
         public static final int bg_logo=0x7f0b006d;
         public static final int book_now=0x7f0b0014;
@@ -1506,7 +1506,6 @@ containing a value of this type.
         public static final int email_edit=0x7f0b0065;
         public static final int email_text=0x7f0b0064;
         public static final int end=0x7f0b002a;
-        public static final int event_space=0x7f0b007b;
         public static final int expand_activities_button=0x7f0b0038;
         public static final int expanded_menu=0x7f0b003e;
         public static final int first_name_edit=0x7f0b0061;
@@ -1524,7 +1523,7 @@ containing a value of this type.
         public static final int image=0x7f0b0039;
         public static final int last_name_edit=0x7f0b0063;
         public static final int last_name_text=0x7f0b0062;
-        public static final int lead_rescuer=0x7f0b007c;
+        public static final int lead_rescuer=0x7f0b007b;
         public static final int listMode=0x7f0b001a;
         public static final int list_item=0x7f0b003b;
         public static final int login_button=0x7f0b0053;

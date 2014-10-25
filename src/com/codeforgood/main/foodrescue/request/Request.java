@@ -4,12 +4,14 @@ import android.location.Location;
 
 import com.codeforgood.main.foodrescue.user.Restaurant;
 import com.codeforgood.main.foodrescue.user.Volunteer;
+import com.google.android.gms.maps.model.LatLng;
 import com.parse.ParseObject;
 
 /**
  * Created by kevinchon on 10/24/14.
  */
-public abstract class Request extends ParseObject{
+public abstract class Request extends ParseObject {
+
     private String date;
     private String time;
     private String typeOfFood;
@@ -17,9 +19,9 @@ public abstract class Request extends ParseObject{
     private int numOfVolunteers;
     private Volunteer[] volunteers;
     private Volunteer leadRescuer;
-    protected Location location;
+    protected LatLng location;
 
-    public Request(String date, String time, String typeOfFood, int weightOfFood){
+    public Request(String date, String time, String typeOfFood, int weightOfFood) {
         this.date = date;
         this.time = time;
         this.typeOfFood = typeOfFood;
@@ -28,41 +30,48 @@ public abstract class Request extends ParseObject{
     }
 
     private void setNumOfVolunteers(int weightOfFood) {
-        if (weightOfFood < 15){
+        if (weightOfFood < 15) {
             volunteers = new Volunteer[1];
             numOfVolunteers = 1;
-        }
-        else{
+        } else {
             volunteers = new Volunteer[(weightOfFood % 15) + 1];
             numOfVolunteers = (weightOfFood % 15) + 1;
         }
     }
 
-    public void setLocation(Restaurant restaurant){
+    public void setLocation(Restaurant restaurant) {
         this.location = restaurant.getLocation();
     }
-    public String getDate(){
+
+    public String getDate() {
         return date;
     }
-    public String getTime(){
+
+    public String getTime() {
         return time;
     }
-    public String getTypeofFood(){
+
+    public String getTypeofFood() {
         return typeOfFood;
     }
-    public int getWeightofFood(){
+
+    public int getWeightofFood() {
         return weightOfFood;
-    }   
-    public int getNumofVolunteers(){
+    }
+
+    public int getNumofVolunteers() {
         return numOfVolunteers;
     }
-    public Volunteer[] getListofVolunteers(){
+
+    public Volunteer[] getListofVolunteers() {
         return volunteers;
     }
-    public Volunteer getisLR(){
+
+    public Volunteer getisLR() {
         return leadRescuer;
     }
-     public Location getLocation(){
+
+    public LatLng getLocation() {
         return location;
     }
 

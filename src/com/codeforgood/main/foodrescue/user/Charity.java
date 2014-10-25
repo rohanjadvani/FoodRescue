@@ -1,18 +1,20 @@
 package com.codeforgood.main.foodrescue.user;
 
-import android.location.Location;
+import com.google.android.gms.maps.model.LatLng;
 
 /**
  * Created by kevinchon on 10/24/14.
  */
-public class Charity extends User{
+public class Charity extends User {
+
     private String name;
 
-    public Charity(String password, String name, Location location,
-            String phone, String email, String username) {
+    public Charity(String password, String name, LatLng location, String phone,
+            String email, String username) {
         super(email, username, password, phone, location);
         this.name = name;
     }
+
     public String getName() {
         return name;
     }

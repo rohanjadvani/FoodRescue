@@ -1,8 +1,9 @@
 package com.codeforgood.main.foodrescue.user;
 
-import com.parse.ParseObject;
-
 import android.location.Location;
+
+import com.google.android.gms.maps.model.LatLng;
+import com.parse.ParseObject;
 
 /**
  * User class
@@ -10,16 +11,16 @@ import android.location.Location;
  * @author Rohan Jadvani
  *
  */
-public abstract class User extends ParseObject{
+public abstract class User extends ParseObject {
 
     private String email;
     private String username;
     private String password;
     private String phone;
-    protected Location location;
+    protected LatLng location;
 
     public User(String email, String username, String password, String phone,
-            Location location) {
+            LatLng location) {
         this.email = email;
         this.username = username;
         this.password = password;
@@ -27,7 +28,7 @@ public abstract class User extends ParseObject{
         this.location = location;
     }
 
-    public Location getLocation() {
+    public LatLng getLocation() {
         return location;
     }
 

@@ -1,6 +1,7 @@
 package com.codeforgood.main.foodrescue.user;
 
 import com.codeforgood.main.foodrescue.request.Request;
+import com.google.android.gms.maps.model.LatLng;
 
 /**
  * Created by kevinchon on 10/24/14.
@@ -24,8 +25,7 @@ public class Volunteer extends User {
     }
 
     public void setLocation(double latitude, double longitude) {
-        location.setLatitude(latitude);
-        location.setLongitude(longitude);
+        location = new LatLng(latitude, longitude);
     }
 
     public void setHasTraining() {

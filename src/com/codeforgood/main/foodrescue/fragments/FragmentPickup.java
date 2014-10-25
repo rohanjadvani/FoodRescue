@@ -3,22 +3,17 @@ package com.codeforgood.main.foodrescue.fragments;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
-
 import android.content.Context;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 
 import com.codeforgood.main.foodrescue.R;
-import com.codeforgood.main.foodrescue.data.JSONData;
+import com.codeforgood.main.foodrescue.user.Restaurant;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.GoogleMap.OnMarkerClickListener;
@@ -42,6 +37,9 @@ public class FragmentPickup extends Fragment implements OnMarkerClickListener {
     GoogleMap map;
     Context mContext;
     Button nearbyPickup;
+    Marker starbucks;
+    Marker starbucksSoho;
+    Marker panera;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -74,10 +72,12 @@ public class FragmentPickup extends Fragment implements OnMarkerClickListener {
                 R.id.map)).getMap();
         map.setOnMarkerClickListener(this);
         // load positions
-        for (int index = 0; index < positions.size(); index++) {
-            map.addMarker(new MarkerOptions().position(positions.get(index))
-                    .title(names.get(index)));
-        }
+        starbucks = map.addMarker(new MarkerOptions()
+                .position(positions.get(0)).title(names.get(0)));
+        starbucksSoho = map.addMarker(new MarkerOptions().position(
+                positions.get(1)).title(names.get(1)));
+        panera = map.addMarker(new MarkerOptions().position(positions.get(2))
+                .title(names.get(2)));
         map.moveCamera(CameraUpdateFactory.newLatLngZoom(positions.get(0), 15));
     }
 
@@ -98,15 +98,17 @@ public class FragmentPickup extends Fragment implements OnMarkerClickListener {
 
     @Override
     public boolean onMarkerClick(Marker arg0) {
-        showConfirmation();
+        if (arg0.getTitle().equals("Starbucks")) {
+            showConfirmation("Starbucks");
+        }
         return false;
     }
 
-    private void showConfirmation() {
+    private void showConfirmation(String restaurant) {
         FragmentTransaction ft = getFragmentManager().beginTransaction();
-        ft.replace(R.id.fragment_container, new FragmentConfirmPickup());
+        ft.replace(R.id.fragment_container, new FragmentConfirmPickup(
+                restaurant));
         ft.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE);
         ft.commit();
     }
-
 }
