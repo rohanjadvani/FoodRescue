@@ -16,5 +16,12 @@
     <string name="last_name">Last Name</string>
     <string name="email">E-mail</string>
     <string name="phone">Phone</string>
+    <string name="volunteer_caps">VOLUNTEER</string>
+    <string name="account">Account</string>
+    <string name="sign_out">Sign Out</string>
+    <string name="nearby">See Nearby Pickups</string>
+    <string name="future">Schedule Future Pickup</string>
+    <string name="check_in_pickup">Check In @ Pickup</string>
+    <string name="check_in_dropoff">Check In @ Dropoff</string>
 
 </resources>
