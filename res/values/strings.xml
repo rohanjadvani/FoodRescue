@@ -4,8 +4,8 @@
     <string name="app_name">FoodRescue</string>
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
-    <string name="username">username</string>
-    <string name="password">password</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
     <string name="login">Login</string>
     <string name="sign_up">Sign up</string>
     <string name="are_you">ARE YOU A:</string>
@@ -13,5 +13,7 @@
     <string name="restaurant">Restaurant</string>
     <string name="charity">Charity</string>
     <string name="first_name">First Name</string>
+    <string name="last_name">Last Name</string>
+    <string name="email">E-mail</string>
 
 </resources>

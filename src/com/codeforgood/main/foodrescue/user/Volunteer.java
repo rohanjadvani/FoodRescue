@@ -21,7 +21,7 @@ public class Volunteer {
 
     public Volunteer(String email, String password, String passwordconfirmation,
                      String firstname, String lastname, String phone){
-        if (password = passwordconfirmation) {
+        if (password == passwordconfirmation) {
 	        this.email = email;
 	        this.password = password;
 	        this.passwordconfirmation = passwordconfirmation;
@@ -32,7 +32,7 @@ public class Volunteer {
 	        this.hasTraining = false;
 	       }
 	    else{
-	    	System.out.println("Passwords Do Not Match")
+	    	System.out.println("Passwords Do Not Match");
 	    }
     }
 
@@ -68,7 +68,7 @@ public class Volunteer {
     public String getPhone(){
     	return phone;
     }
-    public float getLocation(){
+    public Location getLocation(){
     	return location;
     }
     public boolean isLR(){

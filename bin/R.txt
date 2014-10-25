@@ -247,7 +247,7 @@ int id action_context_bar 0x7f09001d
 int id action_menu_divider 0x7f090002
 int id action_menu_presenter 0x7f090003
 int id action_mode_close_button 0x7f090024
-int id action_settings 0x7f09004d
+int id action_settings 0x7f090054
 int id activity_chooser_view_content 0x7f090025
 int id always 0x7f09000f
 int id are_you 0x7f090046
@@ -264,9 +264,12 @@ int id dialog 0x7f090014
 int id disableHome 0x7f090009
 int id dropdown 0x7f090015
 int id edit_query 0x7f090030
+int id email_edit 0x7f090051
+int id email_text 0x7f090050
 int id end 0x7f090017
 int id expand_activities_button 0x7f090026
 int id expanded_menu 0x7f09002c
+int id first_name_edit 0x7f09004d
 int id first_name_text 0x7f09004c
 int id foo_login 0x7f09003d
 int id fragment_container 0x7f09003c
@@ -275,6 +278,8 @@ int id homeAsUp 0x7f09000a
 int id icon 0x7f09002a
 int id ifRoom 0x7f090011
 int id image 0x7f090027
+int id last_name_edit 0x7f09004f
+int id last_name_text 0x7f09004e
 int id listMode 0x7f090006
 int id list_item 0x7f090029
 int id login_button 0x7f090041
@@ -313,6 +318,8 @@ int id title 0x7f09002b
 int id top_action_bar 0x7f090020
 int id up 0x7f090021
 int id useLogo 0x7f09000e
+int id username_edit 0x7f090053
+int id username_text 0x7f090052
 int id withText 0x7f090013
 int integer abc_max_action_buttons 0x7f080000
 int layout abc_action_bar_decor 0x7f030000
@@ -361,8 +368,10 @@ int string action_settings 0x7f0a000f
 int string app_name 0x7f0a000d
 int string are_you 0x7f0a0014
 int string charity 0x7f0a0017
+int string email 0x7f0a001a
 int string first_name 0x7f0a0018
 int string hello_world 0x7f0a000e
+int string last_name 0x7f0a0019
 int string login 0x7f0a0012
 int string password 0x7f0a0011
 int string restaurant 0x7f0a0016

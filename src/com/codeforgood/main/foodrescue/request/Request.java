@@ -16,7 +16,7 @@ public abstract class Request {
     private int numOfVolunteers;
     private Volunteer[] volunteers;
     private Volunteer leadRescuer;
-    private Location location;
+    protected Location location;
 
     public Request(String date, String time, String typeOfFood, int weightOfFood){
         this.date = date;
@@ -58,10 +58,10 @@ public abstract class Request {
     public Volunteer[] getListofVolunteers(){
         return volunteers;
     }
-    public boolean getisLR(){
+    public Volunteer getisLR(){
         return leadRescuer;
     }
-     public float getLocation(){
+     public Location getLocation(){
         return location;
     }
 

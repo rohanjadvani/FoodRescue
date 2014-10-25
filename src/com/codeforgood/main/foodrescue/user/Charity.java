@@ -16,17 +16,17 @@ public class Charity {
     private String closeTime;
 
     public Charity(String email, String password, String passwordconfirmation, String name, Location location, String openTime, String closeTime) {
-        if (password = passwordconfirmation) {
+        if (password == passwordconfirmation) {
 	        this.email = email;
-	        this.password = password
-	        this.passwordconfirmation = passwordconfirmation
+	        this.password = password;
+	        this.passwordconfirmation = passwordconfirmation;
 	        this.name = name;
 	        this.location = location;
 	        this.openTime = openTime;
-	        this.closeTime = closeTime
+	        this.closeTime = closeTime;
 	    }
 	    else{
-	    	System.out.println("Passwords Do Not Match")
+	    	System.out.println("Passwords Do Not Match");
 	    }
     }
     public Location getLocation(){

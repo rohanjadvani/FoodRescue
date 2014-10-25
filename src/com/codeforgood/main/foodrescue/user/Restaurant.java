@@ -14,7 +14,7 @@ public class Restaurant {
     private Location location;
 
     public Restaurant(String password, String passwordconfirmation, String name, Location location, String phone, String email){
-        if (password = passwordconfirmation) {
+        if (password == passwordconfirmation) {
             this.name = name;
             this.location = location;
             this.phone = phone;
@@ -23,7 +23,7 @@ public class Restaurant {
             this.passwordconfirmation = passwordconfirmation;
         }
         else{
-            System.out.println("Passwords Do Not Match")
+            System.out.println("Passwords Do Not Match");
         }
     }
 
