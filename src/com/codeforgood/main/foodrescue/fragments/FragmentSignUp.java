@@ -25,6 +25,8 @@ public class FragmentSignUp extends Fragment implements OnClickListener {
     RadioButton volunteer;
     RadioButton restaurant;
     RadioButton charity;
+    TextView username;
+    TextView password;
     TextView firstText;
     TextView secondText;
     EditText firstEdit;
@@ -50,6 +52,8 @@ public class FragmentSignUp extends Fragment implements OnClickListener {
         secondText = new TextView(mContext);
         firstEdit = new EditText(mContext);
         secondEdit = new EditText(mContext);
+        username = new TextView(mContext);
+        password = new TextView(mContext);
     }
 
     private void findButtons(View view) {
@@ -60,6 +64,8 @@ public class FragmentSignUp extends Fragment implements OnClickListener {
         secondText = (TextView) view.findViewById(R.id.last_name_text);
         firstEdit = (EditText) view.findViewById(R.id.first_name_edit);
         secondEdit = (EditText) view.findViewById(R.id.last_name_edit);
+        username = (TextView) view.findViewById(R.id.username_text);
+        password = (TextView) view.findViewById(R.id.password_text);
     }
 
     private void setListeners() {
