@@ -119,41 +119,42 @@ public class FragmentSignUp extends Fragment implements OnClickListener {
                 secondEdit.setHint("Location");
                 break;
             case R.id.sign_up_button:
-            	sendUserInfoToParse();
-            	break;
+                sendUserInfoToParse();
+                break;
         }
     }
-    
-    private void sendUserInfoToParse(){
-    	ParseUser user = new ParseUser();
-    	user.setUsername(usernameEdit.getText().toString());
-    	user.setPassword(passwordEdit.getText().toString());
-    	user.put("firstValue", firstEdit.getText().toString());
-    	user.put("secondValue", secondEdit.getText().toString());
-    	user.put("email", emailEdit.getText().toString());
-    	user.put("phone", phoneEdit.getText().toString());
-    	
-    	if (volunteer.isChecked()) {
-    		user.put("typeOfUser", "Volunteer");
-    	}
-    	if (restaurant.isChecked()){
-    		user.put("typeOfUser", "Restaurant");
-    	}
-    	if (charity.isChecked()){
-    		user.put("typeOfUser", "Charity");
-    	}
-    	
-    	user.signUpInBackground(new SignUpCallback() {
-    		  public void done(ParseException e) {
-    		    if (e == null) {
-    		      // Hooray! Let them use the app now.
-    		    	System.out.println("Succeeded!");
-    		    } else {
-    		      // Sign up didn't succeed. Look at the ParseException
-    		      // to figure out what went wrong
-    		    	System.out.println("Failed");
-    		    }
-    		  }
-    		});
+
+    private void sendUserInfoToParse() {
+        ParseUser user = new ParseUser();
+        user.setUsername(usernameEdit.getText().toString());
+        user.setPassword(passwordEdit.getText().toString());
+        user.put("firstValue", firstEdit.getText().toString());
+        user.put("secondValue", secondEdit.getText().toString());
+        user.put("email", emailEdit.getText().toString());
+        user.put("phone", phoneEdit.getText().toString());
+
+        if (volunteer.isChecked()) {
+            user.put("typeOfUser", "Volunteer");
+        }
+        if (restaurant.isChecked()) {
+            user.put("typeOfUser", "Restaurant");
+        }
+        if (charity.isChecked()) {
+            user.put("typeOfUser", "Charity");
+        }
+
+        user.signUpInBackground(new SignUpCallback() {
+
+            public void done(ParseException e) {
+                if (e == null) {
+                    // Hooray! Let them use the app now.
+                    System.out.println("Succeeded!");
+                } else {
+                    // Sign up didn't succeed. Look at the ParseException
+                    // to figure out what went wrong
+                    System.out.println("Failed");
+                }
+            }
+        });
     }
 }
